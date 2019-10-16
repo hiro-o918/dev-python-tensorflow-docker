@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  build:
+    machine:
+      docker_layer_caching: true
+    environment:
+      RUNUSER: python
+      SUBMODULE_BRANCH: develop
+    steps:
+      - checkout
+      - run: |
+          make build
+          make test
+          make lint
+workflows:
+  version: 2
+  workflow:
+    jobs:
+      - build

@@ -1,0 +1,9 @@
+docker
+.circleci
+.git
+.gitattributes
+.gitignore
+README.md
+CHANGELOG.md
+LICENSE
+.idea

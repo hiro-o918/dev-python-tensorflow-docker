@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "dev-python-tensorflow-docker"
+version = "0.1.0"
+description = "An example repository for developing python in GPU and CPU environment"
+authors = ["Hironori Yamamoto <mr.nikoru918@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+flake8 = "^3.7"
+flake8-import-order = "^0.18.1"
+pep8-naming = "^0.8.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
