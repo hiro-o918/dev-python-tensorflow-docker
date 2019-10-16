@@ -3,11 +3,8 @@ An example repository for python development in GPU and CPU environment
 
 ## Features
 - Easy building and running by `make` commands.
-- Managing packages by [poetry](https://github.com/sdispater/poetry)[^1]
-- Linting and testing
- 
-[^1]: It cannot handle packages which have a specific version for GPU environment like tensorflow.
-Therefore they are installed in Dockerfiles. 
+- Managing packages by [poetry](https://github.com/sdispater/poetry)<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>
+- Linting and testing by Circle CI
 
 ## Requirements
 - [Docker](https://www.docker.com/) >= 19.03
@@ -39,7 +36,7 @@ $ python src/train_mnist.py
 ```
 ### Run python
 ```bash
-make run
+$ make run
 ```
 
 ### Run bash
@@ -56,3 +53,15 @@ $ make test
 ```bash
 $ make lint
 ```
+
+<hr class="footnotes-sep">
+<section class="footnotes">
+    <ol class="footnotes-list">
+        <li id="fn1"  class="footnote-item">
+            <p>
+                It cannot handle packages which have a specific version for GPU environment like tensorflow.
+                Therefore they are installed in Dockerfiles.<a href="#fnref1" class="footnote-backref">↩</a>
+            </p>
+        </li>
+    </ol>
+</section>
