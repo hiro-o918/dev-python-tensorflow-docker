@@ -6,7 +6,6 @@ PWD := $(shell pwd)
 
 ifdef NVIDIA_SMI_PATH
     DOCKER_GPU_PARAMS := --gpus all
-else
 endif
 
 .PHONY: _build/cpu
