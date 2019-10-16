@@ -15,8 +15,6 @@ _build/cpu:
 .PHONY: _build/gpu
 _build/gpu:
 	@docker build --tag $(IMAGE_NAME) -f $(PWD)/docker/Dockerfile.gpu .
-	@$(MAKE) proto/update
-	@$(MAKE) proto/gen
 
 .PHONY: build
 build:
