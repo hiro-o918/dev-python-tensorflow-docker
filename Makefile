@@ -1,6 +1,6 @@
 NVIDIA_SMI_PATH := $(shell which nvidia-smi)
 IMAGE_NAME := python_tensorflow
-CONTAINER_NAME := python_tensorflow
+CONTAINER_NAME := python.tensorflow
 WORKINGDIR := /var/www
 PWD := $(shell pwd)
 
@@ -15,8 +15,6 @@ _build/cpu:
 .PHONY: _build/gpu
 _build/gpu:
 	@docker build --tag $(IMAGE_NAME) -f $(PWD)/docker/Dockerfile.gpu .
-	@$(MAKE) proto/update
-	@$(MAKE) proto/gen
 
 .PHONY: build
 build:
@@ -33,7 +31,7 @@ run:
 		$(DOCKER_GPU_PARAMS) \
 		--name $(CONTAINER_NAME) \
 		--volume $(PWD):$(WORKINGDIR) \
-		$(CONTAINER_NAME) \
+		$(IMAGE_NAME) \
 		$(ARGS)
 
 .PHONY: bash
