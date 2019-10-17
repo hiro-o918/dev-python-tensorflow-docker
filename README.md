@@ -1,4 +1,6 @@
 # dev-python-tensorflow-docker
+[![CircleCI](https://circleci.com/gh/hiro-o918/dev-python-tensorflow-docker/tree/master.svg?style=svg)](https://circleci.com/gh/hiro-o918/dev-python-tensorflow-docker/tree/master)
+
 An example repository for python development in GPU and CPU environment
 
 ## Features
